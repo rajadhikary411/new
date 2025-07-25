@@ -8,21 +8,23 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Serif Bengali', serif;
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+ html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #111;
+  font-family: 'Noto Serif Bengali', serif;
+  overflow-x: hidden;
+}
 
-    .poster {
-      width: 768px;
-      background: #fff;
-  
-    }
+.poster {
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
 
     .poster img {
       width: 100%;
@@ -100,19 +102,7 @@
     .footer-bar i {
       font-size: 14px;
     }
-
-    @media (max-width: 480px) {
-      .poster {
-        width: 100%;
-      }
-      .headline {
-        font-size: 18px;
-      }
-      .subhead {
-        font-size: 16px;
-      }
-    }
-    .dert{
+       .dert{
       display: flex;
       justify-content: space-between;
 
@@ -129,7 +119,30 @@
   color: white;
  
 }
+
+    @media (max-width: 480px) {
+            .dert{
+      display: flex;
+      justify-content: space-between;
+
+    }
+      .poster {
+        width: 100%;
+      }
+      .headline {
+        font-size: 18px;
+      }
+      .subhead {
+        font-size: 16px;
+      }
+    }
+ 
 @media (max-width: 1080px) {
+        .dert{
+      display: flex;
+      justify-content: space-between;
+
+    }
   .poster {
     width: 100%;
   }
@@ -150,7 +163,7 @@
     flex-wrap: wrap;
     gap: 8px;
     font-size: 12px;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
   }
 
@@ -168,8 +181,7 @@
   }
 
   .dert {
-    flex-direction: column;
-    gap: 5px;
+
     font-size: 14px;
   }
 }
